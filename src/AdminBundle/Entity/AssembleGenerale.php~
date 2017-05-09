@@ -1,0 +1,128 @@
+<?php
+
+namespace AdminBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * AssembleGenerale
+ *
+ * @ORM\Table(name="assemble_generale")
+ * @ORM\Entity(repositoryClass="AdminBundle\Repository\AssembleGeneraleRepository")
+ */
+class AssembleGenerale
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=255)
+     */
+    private $titre;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="annnee", type="integer")
+     */
+    private $annee;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="piecejoint", type="string", length=255)
+     */
+    private $piecejoint;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set titre
+     *
+     * @param string $titre
+     *
+     * @return AssembleGenerale
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    /**
+     * Get titre
+     *
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * Set annnee
+     *
+     * @param integer $annnee
+     *
+     * @return AssembleGenerale
+     */
+    public function setAnnnee($annnee)
+    {
+        $this->annnee = $annnee;
+
+        return $this;
+    }
+
+    /**
+     * Get annnee
+     *
+     * @return int
+     */
+    public function getAnnnee()
+    {
+        return $this->annnee;
+    }
+
+    /**
+     * Set piecejoint
+     *
+     * @param string $piecejoint
+     *
+     * @return AssembleGenerale
+     */
+    public function setPiecejoint($piecejoint)
+    {
+        $this->piecejoint = $piecejoint;
+
+        return $this;
+    }
+
+    /**
+     * Get piecejoint
+     *
+     * @return string
+     */
+    public function getPiecejoint()
+    {
+        return $this->piecejoint;
+    }
+}
+

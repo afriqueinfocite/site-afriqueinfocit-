@@ -1,0 +1,74 @@
+{%  extends "ApplicationBundle::layout.html.twig" %}
+{% block navlef %} 
+       {% include "ApplicationBundle:Association:menu-association.html.twig" %}     
+{% endblock navlef %}
+
+{% block navright %} 
+     <div class = 'row'>
+		<div class = 'col-xs-12'>
+			<p class="bg-info">Historique</p>
+			<p>
+				Crée véritablement en septembre 2014 dans le Val de Marne,
+				l'association Afrique Infocité a été initié bien avant...
+            </p>
+			<a href="{{path('association_historique')}}">
+				<span class="btn btn-danger btn-xs">Lire la suite</span>
+			</a>
+			<hr class ="association_block_divider"/>
+		</div>
+	</div>
+    <div class = 'row'>
+		<div class = 'col-xs-12'>
+			<p class="bg-info">ORGANIGRAMME</p>
+			<p>
+				L'association est dirigée par un conseil d'administration...
+            </p>
+			<a href="{{path('association_organigramme')}}">
+				<span class="btn btn-danger btn-xs">Lire la suite</span>
+			</a>
+			<hr class ="association_block_divider"/>
+		</div>
+	</div> 
+	 <div class = 'row'>
+		<div class = 'col-xs-12'>
+			<p class="bg-info">Nos SOLUTIONS</p>
+			<p>
+				Nous apportons des solutions innovantes aux administrations publique,
+				aux Start-Up ...
+            </p>
+			<a href="{{path('association_nos_solutions')}}">
+				<span class="btn btn-danger btn-xs">Lire la suite</span>
+			</a>
+			<hr class ="association_block_divider"/>
+		</div>
+	</div> 
+	 <div class = 'row'>
+		<div class = 'col-xs-12'>
+			<p class="bg-info">PROJETS</p>
+			<p>
+				Nos projets actuels sont : Anyama 2.0, Cours dispensés dans les mairies,
+				Location d'ordinateurs portables aux étudiants, ...
+            </p>
+			<a href="{{path('association_nos_projets')}}">
+				<span class="btn btn-danger btn-xs">Lire la suite</span>
+			</a>
+			<hr class ="association_block_divider"/>
+		</div>
+	</div> 
+	<div class = 'row'>
+		<div class = 'col-xs-12'>
+			<p class="bg-info">IMPLANTATIONS</p>
+			<p>
+				Bien implanté en France, l'association envisage de s'implanter 
+				très prochainement en Côte d'Ivoire (Afrique),
+				en Allemagne (Europe) et au Canada (Amérique)...
+            </p>
+			<a href="{{path('association_implantations')}}">
+				<span class="btn btn-danger btn-xs">Lire la suite</span>
+			</a>
+			<hr class ="association_block_divider"/>
+		</div>
+	</div> 
+
+{% endblock navright %}
+

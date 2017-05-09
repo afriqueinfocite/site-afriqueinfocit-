@@ -1,0 +1,29 @@
+{%  extends "ApplicationBundle::layout.html.twig" %}
+{% block navlef %} 
+       {% include "ApplicationBundle:Temoignage:menu-temoignage.html.twig" %}       
+{% endblock navlef %}
+
+{% block navright %} 
+     <div class = 'row'>
+		<div class = 'col-sm-12'>
+	{% if   temoignages|length >0    %}
+		{% for temoignage in temoignages %}
+			
+				 <pre>
+					<span style="float:right;width:80%;display:inline;">{{ temoignage.message }}</span>
+					<span style="float:left;width:20%;display:inline"><img  style="width:100px;height:100px;" 
+						class="img img-responsive"
+				 src="{{app.request.basepath}}/uploads/photo/{{ temoignage.photo }}"/></span>
+				</pre>
+			<hr/>
+	 {%  endfor %}
+
+    {% else %}
+		<div class = 'alert alert-info text-center'> Aucun témognage  trouv&eacute;! </div>
+	
+    {% endif %}
+		</div>
+	</div>
+
+{% endblock navright %}
+

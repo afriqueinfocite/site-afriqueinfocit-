@@ -1,0 +1,30 @@
+{%  extends "ApplicationBundle::layout.html.twig" %}
+{% block navlef %} 
+       {% include "ApplicationBundle:Actualite:menu-actualite.html.twig" %}     
+{% endblock navlef %}
+
+{% block navright %} 
+{% if   listeVideos|length >0    %}
+	{% for video in listeVideos %}
+	     <div class = 'row'>
+		<div class = 'col-sm-1 col-xs-3'>
+			<img style="width:30px;height:30px;" class="img img-responsive"
+				 src="{{asset('images/videos.png')}}"/>
+		</div>
+		<div class = 'col-sm-9'>
+			<h3 style="display:inline;">{{video.titre}}</h3> 
+			<a href="{{path('actualite_video_lecture',{'id':video.id})}}"><span class="btn btn-success btn-xs">Regarder</span></a>
+		</div>
+	 </div>
+	 <hr/>
+	
+    {%  endfor %}
+
+    {% else %}
+		<div class = 'alert alert-info text-center'> Aucun article  trouv&eacute;! </div>
+	
+    {% endif %}
+
+
+{% endblock navright %}
+

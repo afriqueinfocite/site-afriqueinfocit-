@@ -1,0 +1,37 @@
+{%  extends "AdminBundle::layout.html.twig" %}
+{% block content %}
+	{% if   adherants|length >0    %}
+         <div class = 'table-responsive' class="table_des_listes">
+	<table class = 'table table-hover table-condensed'>
+	    <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+				<th>Téléphone</th>
+				<th>Motivation</th>
+                <th>Action</th>
+			</tr>		
+         </thead>
+        {% for adherant in adherants %}
+        <tr>
+			<td> {{ adherant.id }} </td>
+			<td> {{ adherant.nom }} </td>
+			<td> {{ adherant.prenom }} </td>
+			<td> {{ adherant.telephone }} </td>
+			<td> {{ adherant.motivation }} </td>
+			 <td > 
+				  <a  href="{{  path('supprimer_adherant',{ 'id':  adherant.id    })   }}" 
+                       class = 'btn btn-danger btn-xs'  title="supprimer">
+                       <span  class = 'glyphicon glyphicon-remove'></span>
+                  </a>
+             </td>
+        </tr>
+       {%  endfor %}
+    </table>
+  </div>
+    {% else %}
+		<div class = 'alert alert-info text-center'> Aucune démande d'adhésion trouv&eacute;! </div>
+	
+    {% endif %}
+{% endblock content %}

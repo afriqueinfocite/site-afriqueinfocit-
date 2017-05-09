@@ -1,0 +1,39 @@
+{%  extends "AdminBundle::layout.html.twig" %}
+{% block content %}
+	{% if   appeloffres|length >0    %}
+         <div class = 'table-responsive' class="table_des_listes">
+	<table class = 'table table-hover table-condensed'>
+	    <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titre</th>
+                <th>Date début</th>
+				<th>Date fin</th>
+                <th>Action</th>
+			</tr>		
+         </thead>
+        {% for appeloffre in appeloffres %}
+        <tr>
+			<td> {{ appeloffre.id }} </td>
+			<td> {{ appeloffre.titre }} </td>
+			<td> {{ appeloffre.datedebut |date('d/m/Y') }} </td>
+			<td> {{ appeloffre.datefin |date('d/m/Y') }} </td>
+			 <td> 
+				<a  href="{{  path('modifier_appel_offre',{ 'id':  appeloffre.id    }) }}"
+					class="btn btn-info btn-xs"  title="modifier">
+					<span class = 'glyphicon  glyphicon-edit'></span>
+                 </a>
+				  <a  href="{{ path('supprimer_appel_offre',{ 'id':  appeloffre.id    })   }}" 
+                       class = 'btn btn-danger btn-xs'  title="supprimer">
+                       <span  class = 'glyphicon glyphicon-remove'></span>
+                  </a>
+             </td>
+        </tr>
+       {%  endfor %}
+    </table>
+  </div>
+    {% else %}
+		<div class = 'alert alert-info text-center'> Aucun appel d'offre   trouv&eacute;! </div>
+	
+    {% endif %}
+{% endblock content %}

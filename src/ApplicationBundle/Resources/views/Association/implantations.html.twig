@@ -1,0 +1,20 @@
+{%  extends "ApplicationBundle::layout.html.twig" %}
+{% block navlef %} 
+       {% include "ApplicationBundle:Association:menu-association.html.twig" %}     
+{% endblock navlef %}
+{% block navright %} 
+<div class = 'row'>
+	<div class = 'col-xs-12'>
+		<p class="bg-info">IMPLANTATIONS</p>
+	<p>
+		Le siège de l’association Afrique Infocité est en 
+		<span style="color:red;">France</span>. 
+		Cependant l’association est représentée en Afrique notamment au 
+		<span style="color:red;">Burkina Faso</span>, et en
+		<span style="color:red;">Côte d’Ivoire</span>.
+		L’association prévoit une présence en <span style="color:red;">Allemagne</span>,
+		et <span style="color:red;">au Canada</span>.
+	</p>
+	</div>
+</div>
+{% endblock navright %}

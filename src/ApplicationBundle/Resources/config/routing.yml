@@ -1,0 +1,154 @@
+# Début gestion des routes de la page d'accueil de l'application#
+
+application_homepage:
+    path:     /
+    defaults: { _controller: ApplicationBundle:Default:index }
+
+# Fin gestion des routes de la page d'accueil de l'application#  
+
+
+
+# Début gestion des routes de la page association #  
+association_homepage:
+    path:     /association
+    defaults: { _controller: ApplicationBundle:Association:index }
+
+association_historique:
+    path:     /association/historique
+    defaults: { _controller: ApplicationBundle:Association:historique }
+
+association_organigramme:
+    path:     /association/organigramme
+    defaults: { _controller: ApplicationBundle:Association:organigramme }
+
+association_nos_solutions:
+    path:     /association/nos-solutions
+    defaults: { _controller: ApplicationBundle:Association:nos_solution }
+
+association_nos_projets:
+    path:     /association/nos-projets
+    defaults: { _controller: ApplicationBundle:Association:nos_projet }
+
+association_implantations:
+    path:     /association/implantations
+    defaults: { _controller: ApplicationBundle:Association:implantations }
+ 
+ 
+# Fin gestion des routes de la page association # 
+ 
+# Début gestion des routes de la page actualité # 
+ 
+ 
+actualite_homepage:
+    path:    /actualite
+    defaults: { _controller:ApplicationBundle:Actualite:index }
+    
+actualite_article:
+    path:   /actualite/liste-des-articles   
+    defaults:  { _controller:ApplicationBundle:Actualite:article }    
+
+actualite_article_delail:
+    path:   /actualite/{id}/article   
+    defaults:  { _controller:ApplicationBundle:Actualite:detail_article }    
+   
+actualite_video:
+    path:   /actualite/liste-des-videos   
+    defaults:  { _controller:ApplicationBundle:Actualite:video }    
+
+actualite_video_lecture:
+    path:   /actualite/{id}/video   
+    defaults:  { _controller:ApplicationBundle:Actualite:lecture_video }    
+       
+actualite_reunion:
+    path:   /actualite/reunions-du-bureau   
+    defaults:  { _controller:ApplicationBundle:Actualite:reunion }    
+
+actualite_assemble:
+    path:   /actualite/assemblee-generale   
+    defaults:  { _controller:ApplicationBundle:Actualite:assemble }    
+
+    
+# Fin gestion des routes de la page actualité #    
+
+
+
+# Début gestion des routes de la page partenaire # 
+    
+partenaire_homepage:
+    path:   /partenaire  
+    defaults:  { _controller:ApplicationBundle:Partenaire:index }    
+  
+    
+partenaire_administration:
+    path:   /partenaire/administrations-institutionnels  
+    defaults:  { _controller:ApplicationBundle:Partenaire:administration }    
+  
+
+partenaire_entreprise:
+    path:   /partenaire/entreprises-et-starpup  
+    defaults:  { _controller:ApplicationBundle:Partenaire:Entreprise }    
+  
+
+partenaire_association:
+    path:   /partenaire/associations  
+    defaults:  { _controller:ApplicationBundle:Partenaire:association }    
+ 
+
+
+partenaire_appel_offre:
+    path:   /partenaire/liste-des-appels-offres  
+    defaults:  { _controller:ApplicationBundle:Partenaire:Appeloffre }    
+   
+# Fin gestion des routes de la page partenaire # 
+
+
+
+# Début gestion des routes de la page adherant # 
+adherant_homepage:
+    path:   /adherer 
+    defaults:  { _controller:ApplicationBundle:Adherant:ajout }    
+  
+# Fin gestion des routes de la page adherant #  
+
+
+# Début gestion des routes de la page témoignage # 
+
+temoignage_homepage:
+    path:   /temoignages 
+    defaults:  { _controller:ApplicationBundle:Temoignage:index }   
+
+    
+temoignage_benevole:
+    path:   /temoignages/benevoles 
+    defaults:  { _controller:ApplicationBundle:Temoignage:benevole }   
+
+    
+temoignage_membre:
+    path:   /temoignages/membres 
+    defaults:  { _controller:ApplicationBundle:Temoignage:membre }   
+
+    
+temoignage_partenaire:
+    path:   /temoignages/partenaires 
+    defaults:  { _controller:ApplicationBundle:Temoignage:partenaire }   
+
+
+
+# Fin gestion des routes de la page témoignage #     
+
+
+
+# Début gestion des routes de la page contact # 
+contact_homepage:
+    path:   /contact
+    defaults:  { _controller:ApplicationBundle:Contact:contact }   
+
+# Fin gestion des routes de la page contact #  
+
+
+# Début gestion des routes de la page contact # 
+emploi_homepage:
+    path:   /emploi
+    defaults:  { _controller:ApplicationBundle:Emploi:emploi }   
+
+# Fin gestion des routes de la page contact #        

@@ -1,0 +1,30 @@
+{%  extends "ApplicationBundle::layout.html.twig" %}
+{% block navlef %} 
+       {% include "ApplicationBundle:Actualite:menu-actualite.html.twig" %}     
+{% endblock navlef %}
+
+{% block navright %} 
+    <div class = 'row'>
+		<div class = 'col-sm-12'>
+		
+	{% if   reunions|length >0    %}
+ 
+        {% for reunion in reunions %}
+		   <p>
+			 Titre:{{ reunion.titre }}<br/>
+			 Date:{{ reunion.date |date('d/m/Y') }}<br/>
+			<a href="{{app.request.basepath}}/uploads/fichierreunion/{{ reunion.piecejoint }}">
+				<span class="btn btn-info btn-sm glyphicon glyphicon-download">Télécharger</span>
+			</a>
+			<hr/>
+		</p>
+       {%  endfor %}
+    {% else %}
+	
+		<div class = 'alert alert-info text-center'> Aucune Réunion  trouv&eacute;! </div>
+	
+    {% endif %}
+	 </div>
+	</div>
+{% endblock navright %}
+

@@ -1,0 +1,30 @@
+{%  extends "ApplicationBundle::layout.html.twig" %}
+{% block navlef %} 
+       {% include "ApplicationBundle:Partenaire:menu-partenaire.html.twig" %}     
+{% endblock navlef %}
+
+{% block navright %} 
+    <div class = 'row'>
+		<div class = 'col-sm-12'>
+		
+	{% if   listePartenairesEntrprises|length >0    %}
+       <div class="row">
+        {% for entreprise in listePartenairesEntrprises %}
+			<div class="col-sm-3">
+				<img  style="width:150px;height:150px;" src = "{{app.request.basepath}}/uploads/photo/{{ listePartenairesEntrprises.photo }}"
+				class = 'img-responsive' /><br/>
+				<span style="color:#E32626">{{listePartenairesEntrprises.nom}}</strong></a></p>
+			</div>
+       {%  endfor %}
+	    </div>
+    {% else %}
+	
+		<div class = 'alert alert-info text-center'> Aucun partenaire  trouv&eacute;! </div>
+	
+    {% endif %} 
+	
+	
+	 </div>
+	</div>
+{% endblock navright %}
+

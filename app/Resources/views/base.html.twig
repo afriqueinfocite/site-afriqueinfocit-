@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Bienvenue!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css')}}"/>
+             <link rel="stylesheet" href="{{ asset('css/awesome/css/font-awesome.min.css')}}"/>
+         {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body class="container" style="padding-top:0px;margin-top:0px;" >
+        {% block body %}
+             <div class="row">
+				<div class="col col-lg-12">
+					{% block header %} 
+           
+					{% endblock header %}
+				</div>
+			</div>
+			
+            {% block footer %}
+                <div class="row"style="background-color:green;">
+                    <div class="col-xs-12">
+                        Copyrightkramo bl@ise 2016
+                    </div>
+                </div>
+            {% endblock  footer%}
+
+	 {% endblock body %}
+	
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('js/jquery-1.9.1.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

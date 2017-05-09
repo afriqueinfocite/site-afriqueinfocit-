@@ -1,0 +1,44 @@
+{%  extends "ApplicationBundle::layout.html.twig" %}
+{% block navlef %} 
+       {% include "ApplicationBundle:Association:menu-association.html.twig" %}     
+{% endblock navlef %}
+{% block navright %} 
+<div class = 'row'>
+	<div class = 'col-xs-12'>
+		<p class="bg-info">Nos solutions</p>
+			<span class="text-danger">
+				-Solution d'automatisation pour les administrations publiques
+			</span>
+			<p>		
+				Nous proposons aux administrations publiques des solutions d'automatisation
+				 de leur opérations manuelles: outils extranet et outil intranet. 
+				Proposition de matériel informatique leur facilitant le traitement de
+				 leur demande, la sécurité, la conservation des documents administratif.
+			</p>
+			<span class="text-danger">
+				-Initation aux outils informatiques : réduire la fracture numérique
+			</span>
+			<p>	
+				En collaboration avec les mairies aux habitants de la ville ne 
+				sachant pas utiliser les outils informatiques. Ces cours 
+				sont basés sur l’utilisation des outils informatique et de 
+				la navigation sur internet puis affiner leur connaissance sur des thèmes précis.
+			</p>
+			<span class="text-danger">
+				-Reconditionnement d' ordinateurs
+			</span>
+			<p>
+			Nous proposons des ordinateurs recondionnés aux étudiants en formation
+			 d'informatique dans le cadre d’un prêt gratuit.
+			</p>
+			<span class="text-danger">
+				-Services aux Start up
+			</span>
+			<p>
+			Vous êtes une start up, vous avez besoin de ressources humaines et
+			 matérielles pour vous developper : nous proposons différents types 
+			 de partenariat.
+			</p>
+	</div>
+</div>
+{% endblock navright %}

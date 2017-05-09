@@ -1,0 +1,64 @@
+{%  extends "ApplicationBundle::layout.html.twig" %}
+{% block navlef %} 
+       {% include "ApplicationBundle:Association:menu-association.html.twig" %}     
+{% endblock navlef %}
+
+{% block navright %} 
+<div class = 'row'>
+	<div class = 'col-xs-12'>
+		<p class="bg-info">BUREAU ET CONSEIL D'ADMINISTRATION</p>
+	<div class = 'table-responsive'>
+		<table class = 'table table-hover table-striped'>
+			<thead>
+				<tr>
+					<th> Nom & Pr&eacute;noms </th>
+					<th>Profession</th>
+					<th> Poste occupé </th>
+				</tr>
+			</thead>
+			<tr>
+				<td>M. Mohamed Diaby</td>
+				<td>Chargé de projet Risques - Natixis</td>
+				<td>Président</td>
+			</tr>
+			<tr>
+				<td>M. Ibrahim DEMBELE</td>
+				<td>Consultant ETL Talend - NeoSpheres</td>
+				<td>Secrétaire Général</td>
+			</tr>
+			<tr>
+				<td>M. Raphael AMANI</td>
+				<td>Project Manager CRM - Plan International</td>
+				<td>Responsable Financier - Trésorier</td>
+			</tr>
+			<tr>
+				<td>M. Aboubacar Abdoul AZIZ</td>
+				<td>Chef de projet MOE - Société Générale</td>
+				<td>Responsable Financier – Recherche de financement</td>
+			</tr>
+			<tr>
+				<td>M. Aurélien CHASSAIN</td>
+				<td>Responsable Production applicative et Intégration</td>
+				<td>Directeur Ressources</td>
+			</tr>
+			<tr>
+				<td>Mme Cynthia ANDOH</td>
+				<td>Master 2 Marketing Digitale</td>
+				<td>Directrice Communication</td>
+			</tr>
+			<tr>
+				<td>M. Abdoulaye DIABY</td>
+				<td>Consultant Tech Leader Oracle,Web Commerce</td>
+				<td>Responsable Financier – Recherche de financement</td>
+			</tr>
+			<tr>
+				<td>Consultant Chef de projet Telecom</td>
+				<td>Consultant Tech Leader Oracle,Web Commerce</td>
+				<td>	Directeur Partenariat</td>
+			</tr>
+
+		</table>
+		</div>
+	</div>
+</div>
+{% endblock navright %}

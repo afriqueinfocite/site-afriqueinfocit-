@@ -1,0 +1,18 @@
+{% extends "AdminBundle::layout.html.twig" %}
+{% block content %} 
+
+<div class="well">
+    <p>Etes-vous certain de supprimer  l'appel d'offre  " {{ appeloffre.titre}}"?</p>
+    {# On met l'id de l'article dans la route de l'action du formulaire #}
+    <form action="{{ path('supprimer_appel_offre',{'id':appeloffre.id}) }}" method="POST">
+        
+        <a href="{{  path('liste_appel_offre')}}" class="btn  btn-default">
+        <i class="glyphicon glyphicon-chevron-left"></i>Retour à la liste
+        </a>
+        {# Ici j'ai écrit le bouton de soumission à la main #} 
+        <input type="submit" value="Supprimer" class="btn btn-danger" /> 
+        {# Ceci va générer le champ CSRF #} 
+     
+    </form>
+</div>
+{% endblock %}

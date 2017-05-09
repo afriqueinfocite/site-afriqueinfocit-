@@ -1,0 +1,170 @@
+
+
+admin_homepage:
+    path:     /
+    defaults: { _controller: AdminBundle:Default:index }
+
+    
+    
+ # Début des routes de gestion des articles
+ajout_article:
+    path:     /article/ajout
+    defaults: { _controller: AdminBundle:Article:ajouter }
+
+liste_article:
+    path:     /article
+    defaults: { _controller: AdminBundle:Article:index }
+
+modifier_article:
+    path:    /article/{id}/modifier
+    defaults:  { _controller: AdminBundle:Article:modifier } 
+
+supprimer_article:
+    path:    /article/{id}/supprimer
+    defaults:  { _controller: AdminBundle:Article:supprimer } 
+
+# Fin des routes de gestion des articles
+ 
+ 
+ 
+ 
+# Début des routes de gestion des vidéos
+    
+ajout_video:
+    path:     /video/ajout
+    defaults: { _controller: AdminBundle:Video:ajouter }
+
+liste_video:
+    path:     /video
+    defaults: { _controller: AdminBundle:Video:index }
+
+modifier_video:
+    path:    /Video/{id}/modifier
+    defaults:  { _controller: AdminBundle:Video:modifier } 
+
+supprimer_video:
+    path:    /video/{id}/supprimer
+    defaults:  { _controller: AdminBundle:Video:supprimer } 
+
+ # Fin des routes de gestion des vidéos
+ 
+ # Début des routes de gestion des réunions
+    
+ajout_reunion:
+    path:     /reunion/ajout
+    defaults: { _controller: AdminBundle:Reunion:ajouter }
+
+liste_reunion:
+    path:     /reunion
+    defaults: { _controller: AdminBundle:Reunion:index }
+
+modifier_reunion:
+    path:    /reunion/{id}/modifier
+    defaults:  { _controller: AdminBundle:Reunion:modifier } 
+
+supprimer_reunion:
+    path:    /reunion/{id}/supprimer
+    defaults:  { _controller: AdminBundle:Reunion:supprimer } 
+
+ # Fin des routes de gestion des réunions
+ 
+ 
+ 
+ 
+ 
+ 
+ # Début des routes de gestion des assemblées générales
+    
+ajout_assemble:
+    path:     /assemble/ajout
+    defaults: { _controller: AdminBundle:Assemble:ajouter }
+
+liste_assemble:
+    path:     /assemble
+    defaults: { _controller: AdminBundle:Assemble:index }
+
+modifier_assemble:
+    path:    /assemble/{id}/modifier
+    defaults:  { _controller: AdminBundle:Assemble:modifier } 
+
+supprimer_assemble:
+    path:    /assemble/{id}/supprimer
+    defaults:  { _controller: AdminBundle:Assemble:supprimer } 
+
+ # Fin des routes de gestion des assemblées générales
+ 
+# Début des routes de gestion des partenaires
+ajout_partenaire:
+    path:     /partenaire/ajout
+    defaults: { _controller: AdminBundle:Partenaire:ajouter }
+
+liste_partenaire:
+    path:     /partenaire
+    defaults: { _controller: AdminBundle:Partenaire:index }
+
+modifier_partenaire:
+    path:    /partenaire/{id}/modifier
+    defaults:  { _controller: AdminBundle:Partenaire:modifier } 
+
+supprimer_partenaire:
+    path:    /partenaire/{id}/supprimer
+    defaults:  { _controller: AdminBundle:Partenaire:supprimer } 
+
+# Fin des routes de gestion des partenaires
+
+
+
+# Début des routes de gestion des appels d'offres
+ajout_appel_offre:
+    path:     /appels-offres/ajout
+    defaults: { _controller: AdminBundle:Appeloffre:ajouter }
+
+
+liste_appel_offre:
+    path:     /appels-offres
+    defaults: { _controller: AdminBundle:Appeloffre:index }
+
+modifier_appel_offre:
+    path:    /appels-offres/{id}/modifier
+    defaults:  { _controller: AdminBundle:Appeloffre:modifier } 
+
+supprimer_appel_offre:
+    path:    /appels-offres/{id}/supprimer
+    defaults:  { _controller: AdminBundle:Appeloffre:supprimer }
+
+# Fin des routes de gestion des appels d'offres
+
+# Début des routes de gestion des adhérants
+
+liste_adherant:
+    path:     /liste-adherant
+    defaults: { _controller: AdminBundle:Adherant:index }
+
+supprimer_adherant:
+    path:    /adherant/{id}/supprimer
+    defaults:  { _controller: AdminBundle:Adherant:supprimer }
+
+# Fin des routes de gestion des adhérants
+
+
+
+# Début des routes de gestion des témoignages
+
+ajout_temoignage:
+    path:     /temoignage/ajout
+    defaults: { _controller: AdminBundle:Temoignage:ajouter }
+
+liste_temoignage:
+    path:     /liste-des-temoignages
+    defaults: { _controller: AdminBundle:Temoignage:index }
+
+modifier_temoignage:
+    path:    /temoignage/{id}/modifier
+    defaults:  { _controller: AdminBundle:Temoignage:modifier } 
+
+supprimer_temoignage:
+    path:    /temoignage/{id}/supprimer
+    defaults:  { _controller: AdminBundle:Temoignage:supprimer } 
+
+# Fin des routes de gestion des articles
+ 

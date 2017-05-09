@@ -1,0 +1,35 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    service.photo_uploader:
+        class: AdminBundle\FileUploader\FileUploader
+        arguments: ['%photos_directory%']
+    
+    service.fichier_reunion_uploader:
+        class: AdminBundle\FileUploader\FileUploader 
+        arguments: ['%fichiers_reunion_directory%']
+    
+    service.fichier_assemble_uploader:
+        class: AdminBundle\FileUploader\FileUploader
+        arguments: ['%fichiers_assemble_directory%']
+   
+    service.fichier_appel_offre_uploader:
+        class: AdminBundle\FileUploader\FileUploader
+        arguments: ['%fichiers_appel_offre_directory%']
+   
+    service.fichiers_email_uploader:
+        class: AdminBundle\FileUploader\FileUploader
+        arguments: ['%fichiers_email_directory%']
+
+    service.app_user_registration_listener:
+        class: UserBundle\EventListener\RegistrationListener
+        arguments: []
+        tags:
+            - { name: kernel.event_subscriber } 
+            

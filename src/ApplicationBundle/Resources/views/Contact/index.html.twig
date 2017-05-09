@@ -1,0 +1,95 @@
+{%  extends "ApplicationBundle::layout.html.twig" %}
+
+{% block navlef %} 
+   <h3>Retrouvez Nous</h3>
+    <div class="row">
+		<div class="col-md-12">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.040039504636!2d2.4197760156730217!3d48.81929747928364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e672e362ae0729%3A0x1d6cd0dde733d3e8!2s17+Rue+des+Saules%2C+94410+Saint-Maurice!5e0!3m2!1sfr!2sfr!4v1461417451340" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<dl>
+                 <dt>17 rue Des Saules ,<br>94410 Saint Maurice.</dt>
+                 <dd><span>Tél: </span>06 58 78 98 49</dd>
+                 <dd><span>Tél:</span> 07 58 32 89 35</dd>
+                  <dd><span>E-mail: </span><a href="#" class="link">afriqueinfocite@yahoo.fr</a></dd>
+                  </dl> 
+		</div>
+	</div>
+                    
+{% endblock navlef %}
+
+{% block navright %} 
+		<div class="col-md-12">
+	{% if(app.session.flashbag.has('notice')) %}
+		<div class="alert alert-success"> 
+			{{ app.session.flashbag.get('notice')[0] }}
+		</div> 
+	{% endif %} 
+	<!-- {% if(app.session.flashbag.has('error')) %} 
+		<div class="alert alert-danger"> 
+			{{ app.session.flashbag.get('error')[0] }}
+		</div>
+	{% endif %} -->
+	</div>
+    {{ form_start(form, {'attr': {'class': 'form-horizontal  col-md-12'}}) }}
+		<div class = 'form-group'>
+			<legend>Formulaire de Conact</legend>
+		</div>
+		  {# Les erreurs générales du formulaire. #}
+		  {{ form_errors(form) }}
+		<div class="form-group">
+				{{ form_errors(form.nom) }}
+				<div class="col-sm-2">
+					{{  form_label(form.nom, "Nom:")  }}
+				</div>
+				<div class="col-sm-10">
+				  {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+		<div class="form-group">
+				{{ form_errors(form.prenom) }}
+				<div class="col-sm-2">
+					{{  form_label(form.prenom, "Prénom:")  }}
+				</div>
+				<div class="col-sm-10">
+				  {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+				</div>
+		</div>
+		<div class="form-group">
+				{{ form_errors(form.email) }}
+				<div class="col-sm-2">
+					{{  form_label(form.email, "Email:")  }}
+				</div>
+				<div class="col-sm-10 col-md-10">
+				  {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+				</div>
+		</div>
+		<div class="form-group">
+				{{ form_errors(form.objet) }}
+				<div class="col-sm-2">
+					{{  form_label(form.objet, "Objet:")  }}
+				</div>
+				<div class="col-sm-10 col-md-10">
+				  {{ form_widget(form.objet, {'attr': {'class': 'form-control'}}) }}
+				</div>
+		</div>
+		<div class="form-group">
+				{{ form_errors(form.message) }}
+				<div class="col-sm-2">
+					{{  form_label(form.message, "Message:")  }}
+				</div>
+				<div class="col-sm-10 col-md-10">
+				  {{ form_widget(form.message, {'attr': {'class': 'form-control'}}) }}
+				</div>
+		</div>
+			<input style="margin-left:100px;" type="submit"  value = "valider" class="btn btn-primary" />
+  {{ form_rest(form) }}
+
+  {# Fermeture de la balise <form> du formulaire HTML #}
+  {{ form_end(form) }}
+
+{% endblock navright %}
+
+

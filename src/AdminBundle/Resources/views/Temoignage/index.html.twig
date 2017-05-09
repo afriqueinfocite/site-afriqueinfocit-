@@ -1,0 +1,48 @@
+{%  extends "AdminBundle::layout.html.twig" %}
+{% block content %}
+	{% if   temoignages|length >0    %}
+         <div class = 'table-responsive' class="table_des_listes">
+	<table class = 'table table-hover table-condensed'>
+	    <thead>
+            <tr>
+                <th>ID</th>
+                <th>Catégorie</th>
+                <th>Message</th>
+				<th>Photo</th>
+                <th>Action</th>
+			</tr>		
+         </thead>
+        {% for temoignage in temoignages %}
+        <tr>
+			<td> {{ temoignage.id }} </td>
+			<td> {{ temoignage.categorie }} </td>
+			<td><pre style="max-width:800px;white-space: pre-wrap;
+							white-space: -moz-pre-wrap;
+							white-space: -pre-wrap;
+							white-space: -o-pre-wrap;"> 
+				{{ temoignage.message }}
+				</pre>
+			</td>
+			<td>
+				<img  style="width:100px;height:100px;"src = "{{app.request.basepath}}/uploads/photo/{{ temoignage.photo }}"
+				class = 'img-responsive' />
+			</td>
+			 <td > 
+				<a  href="{{  path('modifier_temoignage',{ 'id':  temoignage.id    }) }}"
+					class="btn btn-info btn-xs"  title="modifier">
+					<span class = 'glyphicon  glyphicon-edit'></span>
+                 </a>
+				  <a  href="{{  path('supprimer_temoignage',{ 'id':  temoignage.id    })   }}" 
+                       class = 'btn btn-danger btn-xs'  title="supprimer">
+                       <span  class = 'glyphicon glyphicon-remove'></span>
+                  </a>
+             </td>
+        </tr>
+       {%  endfor %}
+    </table>
+  </div>
+    {% else %}
+		<div class = 'alert alert-info text-center'> Aucun témoignage  trouv&eacute;! </div>
+	
+    {% endif %}
+{% endblock content %}

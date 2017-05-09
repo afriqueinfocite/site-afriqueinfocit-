@@ -1,0 +1,26 @@
+{# src\ImmobiliereBundle\Resources\views\menu\menu.html.twig #}
+   <header class="header">
+          <nav class="navbar navbar-default">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="{{path('application_homepage')}}"><span class="glyphicon glyphicon-home"></span>&nbsp;Accueil</a></li>
+                  <li><a href="{{path('association_homepage')}}">L'association</a></li>
+				  <li><a href="{{path('actualite_homepage')}}">Actualités</a></li>
+				  <li><a href="{{path('adherant_homepage')}}">Adhérer</a></li>
+				  <li><a href="{{path('temoignage_homepage')}}">Témoignages</a></li>
+				  <li><a href="{{path('emploi_homepage')}}">Emploi</a></li>
+				  <li><a href="{{path('contact_homepage')}}">Contact</a></li>
+                </ul>
+               </div>
+            </div>
+          </nav>
+    </header>

@@ -1,0 +1,72 @@
+{%  extends "ApplicationBundle::layout.html.twig" %}
+	{% block home%}
+	<div class="embed-responsive embed-responsive-16by9">
+		 <iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/JISq6iOABxs" frameborder="1" allowfullscreen width=100% height=400 px></iframe> 
+    </div>
+   <!-- debut 1er block-->
+   <div class = 'col-sm-4'>
+		<div class = 'panel panel-info'>
+			<div class = 'panel-heading'>
+				<h3 class = 'panel-title'>
+					TIC et Administration publique
+				</h3>
+			</div>
+			<div class = 'panel-body'>
+				<div class = 'row'>
+				<div class = 'col-xs-12'>
+					<img src = "{{asset('images/tic_et_dev.jpg')}}"  class = 'img-responsive' />
+				</div>
+				<div class = 'col-xs-12'>
+					Afrique infocité realise des application pour les administration publique
+					<span class="btn btn-danger btn-xs">Lire la suite</span>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<!-- fin 1er block-->
+	 <!-- debut 2ième block-->
+	<div class = 'col-sm-4'>
+		<div class = 'panel panel-success'>
+			<div class = 'panel-heading'>
+				<h3 class = 'panel-title'>
+					TIC et Dévéloppement Durable
+				</h3>
+			</div>
+			<div class = 'panel-body'>
+				<div class = 'row'>
+					<div class = 'col-xs-12'>
+						<img src = "{{asset('images/tic_et_adm.jpg')}}"  class = 'img-responsive' />
+					</div>
+					<div class = 'col-xs-12'>
+						Afrique infocité realise des application pour les administration publique
+						<span class="btn btn-danger btn-xs">Lire la suite</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 <!-- fin 2ième block-->
+	 <!-- debut 3ième block-->
+	<div class = 'col-sm-4'>
+		<div class = 'panel panel-success'>
+			<div class = 'panel-heading'>
+				<h3 class = 'panel-title'>
+					Start Up
+				</h3>
+			</div>
+			<div class = 'panel-body'>
+				<div class = 'row'>
+				<div class = 'col-xs-12'>
+					<img src = "{{asset('images/startup.jpg')}}"  class = 'img-responsive' />
+				</div>
+				<div class = 'col-xs-12'>
+					Afrique infocité realise des application pour les administration publique
+					<span class="btn btn-danger btn-xs">Lire la suite</span>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	 <!-- fin 3ième block-->
+	{% endblock home %}
